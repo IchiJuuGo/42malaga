@@ -1,0 +1,20 @@
+# Iniciamos git EN EL DIRECTORIO
+git init
+
+# Añadimos todos los archivos del repositorio local
+git add .
+
+# Capturamos una instantanea de los cambios que han
+habido en el repositorio local y le ponemos el nombre
+que queramos
+git commit -m "<fecha de hoy>"
+
+# Subimos los cambios a GitHub
+git push <link del repo> main
+
+git@github.com:IchiJuuGo/42malaga.git
+
+
+## PRIMERA VEZ ##
+
+
