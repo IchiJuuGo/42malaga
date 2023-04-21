@@ -5,16 +5,15 @@ git init
 git add .
 
 # Capturamos una instantanea de los cambios que han
-habido en el repositorio local y le ponemos el nombre
-que queramos
+habido en el repositorio local y le ponemos nombre
 git commit -m "<fecha de hoy>"
 
 # Subimos los cambios a GitHub
-git push <link del repo> main
+git push git@github.com:IchiJuuGo/42malaga.git main
 
-git@github.com:IchiJuuGo/42malaga.git
+//////////////////
 
-
-## PRIMERA VEZ ##
-
-
+git init
+git add .
+git commit -m 21/04/2023
+git push git@github.com:IchiJuuGo/42malaga.git main 

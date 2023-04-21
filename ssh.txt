@@ -1,0 +1,7 @@
+# Como crear una clave SSH
+
+Escribimos en la consola:
+
+ssh.keygen
+
+y ya esta.
