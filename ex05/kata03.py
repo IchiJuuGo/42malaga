@@ -11,3 +11,4 @@ is not higher than 42.
 kata = "The right format"
 print(f"{kata:->41}")
 
+

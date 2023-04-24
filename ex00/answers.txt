@@ -10,4 +10,4 @@ pip freeze
 pip show numpy
 pip unistall numpy
 pip install numpy --force-reinstall
-
+python3 -m pip freeze > requiriments.txt
