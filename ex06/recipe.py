@@ -63,3 +63,8 @@ detalles_receta(cookbook, "Sandwich")
 # Funcion que tome el nombre de una receta y lo elimine
 # Funcion que sume una receta desde el input de usuario.
     # Para ello necesitas un nombre, ingredientes, meal y prep_time
+
+
+
+# BILBIOGRAFIA
+# https://j2logo.com/bucle-for-en-python/#for-en-python
