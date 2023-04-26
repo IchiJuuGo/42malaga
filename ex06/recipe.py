@@ -32,27 +32,19 @@ cookbook = {
         "prep_time": 15
     },
 
-    "Caracoles" : {
-        "ingredients": ["avocado", "arugula", "tomatoes", "spinach"],
-        "meal": "lunch", 
-        "prep_time": 15
-    },
-
 }
 
 # PARTE 2 - HELPFUL FUNCTIONS
-# Funcion que printe los nombres de todas las recetas.
-'''
+
 def nombres_recetas(cookbook):
+    # Funcion que printe los nombres de todas las recetas.
     for nombre_receta in cookbook:
         print(nombre_receta)
 
-nombres_recetas(cookbook)
+# nombres_recetas("Sandwich")
 
-'''
-# Funcion que coja el nombre de una receta y printe sus detalles
-'''
 def detalles_receta(cookbook, nombre_receta):
+    # Funcion que coja el nombre de una receta y printe sus detalles
     for nombre, detalles in cookbook.items():
         if nombre == nombre_receta:
             
@@ -62,48 +54,93 @@ def detalles_receta(cookbook, nombre_receta):
             print(f"Tiempo de preparacion: {(cookbook)[nombre]['prep_time']} minutos")
 
         else:
-            print("No encuentro la receta maricon")
+            print("No encuentro la receta")
 
         exit()
 
-detalles_receta(cookbook, "Sandwich")
-'''
-# Funcion que tome el nombre de una receta y lo elimine
-'''
+# detalles_receta(cookbook, "Sandwich")
+
 def eliminar_receta(cookbook, nombre_receta):
-        if nombre_receta in cookbook:
-            del cookbook[nombre_receta]
-            print("Receta eliminada")
-        else:
-            print("No se encuentra la receta")
+    # Funcion que tome el nombre de una receta y lo elimine
+    if nombre_receta in cookbook:
+        del cookbook[nombre_receta]
+        print("Receta eliminada")
+    else:
+        print("No se encuentra la receta")
         
 # eliminar_receta(cookbook, "Caracoles")
+
+def agregar_receta(cookbook):
+    # Funcion que sume una receta desde el input de usuario.
+    # Para ello necesitas un nombre, ingredientes, meal y prep_time
+    nombre_receta = input("Introduce el nombre de la receta: ")
+    ingredients = input("Introduce los ingredientes separados por comas: ").split(",")
+    meal = input("El mejor momento para esta comida es: ")
+    prep_time = int(input("Tiempo de preparacion en min: "))
+
+    if isinstance(prep_time, int):
+        print("Por favor introduce un numero valido")
+
+    nueva_receta = {"nombre": nombre_receta, "ingredients": ingredients, "meal": meal, "prep_time": prep_time}
+    cookbook[nombre_receta] = nueva_receta
+
+# agregar_receta(cookbook)
+
+def cerrar_libro(cookbook):
+    print("Gracias por cocinar con nosotros <3")
+    return True
+
+# cerrar_libro(cookbook)
+
+############### HASTA AQUI FUNCIONA <3 ###############
+
+# PARTE 3 - A COMMAND LINE EXECUTABLE!
+# El programa te hara tomar una decision entre imprimir el contenido del cookbook,
+# mostrar, agregar, eliminar una receta o salir del programa.
+
+'''
+# Lista de las funciones
+nombres_recetas("Sandwich")
+detalles_receta(cookbook, "Sandwich")
+eliminar_receta(cookbook, "Sandwich")
+agregar_receta(cookbook)
+cerrar_libro(cookbook)
 '''
 
-# HASTA AQUI FUNCIONA <3
+def programa():
+    while True:
+        print("Bienvenido al libro de recetas de Python")
+        print("Por favor elige una opcion: ")
+        print("1: Agregar una receta")
+        print("2: Eliminar receta")
+        print("3: Imprimir una receta")
+        print("4: Imprimir el libro de cocina")
+        print("5: Salir de la app")
 
-# Funcion que sume una receta desde el input de usuario.
-    # Para ello necesitas un nombre, ingredientes, meal y prep_time
+        try:
+            elegir = int(input("Introduce un numero del 1 al 5: "))
+            if elegir == 1:
+                agregar_receta(cookbook)
+            elif elegir == 2:
+                eliminar_receta(cookbook)
+            elif elegir == 3:
+                detalles_receta(cookbook)
+            elif elegir == 4:
+                nombres_recetas(cookbook)
+            elif elegir == 5:
+                cerrar_libro(cookbook)
+            else:
+                print("Por favor introduce un numero valido")
+        except ValueError:
+            print("Invalid choice. Please enter a numbre from 1 - 5")    
+        break
 
-def sumar_receta(cookbook):
-    input("Introduce el nombre de la receta: ")
-    input("Introduce los ingredientes: ")
-    input("El mejor momento para esta comida es: ")
-    input("Tiempo de preparacion: ")
-
-    nuevo_diccionario = {}
     
-sumar_receta(cookbook)
+programa()
 
 # BILBIOGRAFIA
 # https://j2logo.com/bucle-for-en-python/#for-en-python
 # https://www.w3schools.com/python/python_dictionaries.asp
-
-
-
-
-
-
 
 # ///////////////////
 # BACKUP DICCIONARIO
@@ -122,12 +159,6 @@ sumar_receta(cookbook)
 #     },
     
 #     "Salad" : {
-#         "ingredients": ["avocado", "arugula", "tomatoes", "spinach"],
-#         "meal": "lunch", 
-#         "prep_time": 15
-#     },
-
-#     "Caracoles" : {
 #         "ingredients": ["avocado", "arugula", "tomatoes", "spinach"],
 #         "meal": "lunch", 
 #         "prep_time": 15
