@@ -60,13 +60,17 @@ def detalles_receta(cookbook, nombre_receta):
 
 # detalles_receta(cookbook, "Sandwich")
 
-def eliminar_receta(cookbook, nombre_receta):
+def eliminar_receta(cookbook):
     # Funcion que tome el nombre de una receta y lo elimine
-    if nombre_receta in cookbook:
-        del cookbook[nombre_receta]
-        print("Receta eliminada")
-    else:
-        print("No se encuentra la receta")
+    while True:
+        input("Por favor introduce el nombre de la receta que quieres eliminar: ")
+        nombre_receta = input
+        if nombre_receta in cookbook:
+            del cookbook[nombre_receta]
+            print("Receta eliminada")
+            break
+        else:
+            input("Introduce una receta ya existente en el libro para eliminarla: ")
         
 # eliminar_receta(cookbook, "Caracoles")
 
@@ -75,6 +79,7 @@ def agregar_receta(cookbook):
     # Para ello necesitas un nombre, ingredientes, meal y prep_time
     nombre_receta = input("Introduce el nombre de la receta: ")
     ingredients = input("Introduce los ingredientes separados por comas: ").split(",")
+    # Se puede hacer con while pidiendo inputs hasta que haya un espacio en blanco
     meal = input("El mejor momento para esta comida es: ")
     prep_time = int(input("Tiempo de preparacion en min: "))
 
@@ -129,39 +134,16 @@ def programa():
                 nombres_recetas(cookbook)
             elif elegir == 5:
                 cerrar_libro(cookbook)
-            else:
-                print("Por favor introduce un numero valido")
+                break
+            # else:
+            #     print("Por favor introduce un numero valido")
         except ValueError:
-            print("Invalid choice. Please enter a numbre from 1 - 5")    
-        break
+            input("Invalid choice. Please enter a numbre from 1 - 5: ")    
+        # break
 
-    
-programa()
+# programa()
+eliminar_receta(cookbook)
 
 # BILBIOGRAFIA
 # https://j2logo.com/bucle-for-en-python/#for-en-python
 # https://www.w3schools.com/python/python_dictionaries.asp
-
-# ///////////////////
-# BACKUP DICCIONARIO
-# ///////////////////
-# cookbook = {
-#     "Sandwich" : {
-#         "ingredients": ["ham", "bread", "cheese", "tomatoes"],
-#         "meal": "lunch", 
-#         "prep_time": 10
-#     },
-
-#     "Cake" : {
-#         "ingredients": ["flour", "sugar", "eggs"],
-#         "meal": "dessert", 
-#         "prep_time": 60
-#     },
-    
-#     "Salad" : {
-#         "ingredients": ["avocado", "arugula", "tomatoes", "spinach"],
-#         "meal": "lunch", 
-#         "prep_time": 15
-#     },
-
-# }

@@ -81,3 +81,24 @@ print(f"Estoy aprendiendo {lenguaje1} en {escuela1}.")'''
 #     "Sinceridad": True
 # }
 
+import argparse
+
+def sumar_numeros(a, b):
+    return a + b
+
+if __name__ == '__main__':
+    # Crear un objeto analizador de argumentos
+    parser = argparse.ArgumentParser(description='Suma dos números.')
+
+    # Agregar los argumentos de la línea de comandos
+    parser.add_argument('numero1', type=int, help='El primer número a sumar.')
+    parser.add_argument('numero2', type=int, help='El segundo número a sumar.')
+
+    # Analizar los argumentos de la línea de comandos
+    args = parser.parse_args()
+
+    # Realizar la suma
+    resultado = sumar_numeros(args.numero1, args.numero2)
+
+    # Mostrar el resultado
+    print(f'La suma de {args.numero1} y {args.numero2} es {resultado}.')
