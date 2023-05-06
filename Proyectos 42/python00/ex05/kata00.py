@@ -1,4 +1,6 @@
 
+# EX05 - KATA00 #
+
 '''
 The kata variable is always a tuple and 
 can only be filled with integer.
@@ -11,5 +13,4 @@ kata = (19, 42, 21)
 print(f"The three numbers are: {kata[0]}, {kata[1]}, {kata[2]}")
 
 # Usamos f-strings para printar los valores dentro de la cadena.
-
 # https://fstring.help

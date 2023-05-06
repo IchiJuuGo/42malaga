@@ -1,4 +1,6 @@
 
+# EX05 - KATA02 #
+
 '''
 The kata variable is always a tuple that contains 
 5 non-negative integers. The first integer contains 

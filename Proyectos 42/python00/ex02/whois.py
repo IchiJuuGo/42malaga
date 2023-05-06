@@ -1,12 +1,12 @@
 
+# EX02 / WHOIS.PY #
+
 '''Hacer un programa que utilice un numero como argumento, compruebe si es par
 impar o 0 e imprima el resultado'''
 
 '''Si se introducen mas de un argumento, o el argumento no es un entero,
 que imprima un mensaje de error. Si no se introduce ning'un argumento,
 que no haga nada o que printe la forma de uso'''
-
-# /////////////////////////////////
 
 import sys
 
@@ -18,7 +18,7 @@ try:
         suuji = int(sys.argv[1])
         try:
             if suuji == 0:
-                print('Soy Zero')
+                print('Soy cero')
             elif suuji % 2 == 0:
                 print('Soy par')
             else:

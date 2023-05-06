@@ -1,7 +1,8 @@
 
+# EX01 / EXEC.PY #
+
 ''' Crear un programa que tome la cadena como argumento, le de la vuelta,
 le cambie las letras de mayus a minus y viceversa y printe el resultado. '''
-''''''
 
 import sys
 
@@ -20,6 +21,4 @@ if len(sys.argv) > 1:
 
 else:
     print("Introduce al menos una palabra")
-
-# if__name__ =='__main__'
 

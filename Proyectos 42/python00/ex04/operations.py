@@ -1,8 +1,10 @@
 
-import sys
+# EX04 / OPERATIONS.PY #
 
-# Esta funcion recoge los argumentos A y B, realiza 
-# las operaciones e imprime los resultados:
+'''Esta funcion recoge los argumentos A y B, realiza 
+las operaciones e imprime los resultados:'''
+
+import sys
 
 def calculadora(A, B):
 
@@ -22,16 +24,16 @@ def calculadora(A, B):
     print('Division: ', Quotient)
     print('Modulo: ', Remainder)
     
-# Si no se introduce ningun argumento, 
-# nos imprime la forma de uso y cierra el programa:
+'''Si no se introduce ningun argumento, 
+nos imprime la forma de uso y cierra el programa:'''
 
 if len(sys.argv) == 1:
     print("Debes introducir dos numeros enteros")
     exit()
 
-# Si la longitud de los argumentos es diferente
-# a 3 o si los argumentos no son enteros,
-# nos muestre un mensaje de error:
+'''Si la longitud de los argumentos es diferente
+a 3 o si los argumentos no son enteros,
+nos muestre un mensaje de error:'''
 
 if len(sys.argv) != 3:
     print("Introduce \"dos\" numeros enteros")
@@ -44,5 +46,3 @@ else:
     except ValueError:
         print("Solo acepto numeros enteros")
     
-# HASTA AQUI PERFECTO <3
-

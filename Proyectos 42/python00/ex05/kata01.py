@@ -1,4 +1,6 @@
 
+# EX05 - KATA01 #
+
 '''
 The kata variable is always a dictionary 
 and can only be filled with strings.

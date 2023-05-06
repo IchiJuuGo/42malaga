@@ -1,4 +1,5 @@
 
+# EX06 - RECIPE.PY #
 
 cookbook = {
     'Sandwich': {
@@ -21,33 +22,36 @@ cookbook = {
 
     }
 
-def show_cookbook():
+def mostrar_cookbook():
     for a in cookbook:
         print(a)
 
-def details_recipe():
-    r = input("Introduzca el nombre de la receta para mostrar sus detalles: ")
-    print(f"Recipe for {r}:")
-    print(f"\tIngedients list:  {cookbook[r]['ingredients']}")
-    print(f"\tTo be eaten for {cookbook[r]['meal']}.")
-    print(f"\tTakes {cookbook[r]['prep_time']} minutes of cooking.")
+def detalles_receta():
+    receta = input("Introduzca el nombre de la receta para mostrar sus detalles: ")
+    print(f"Receta de {receta}:")
+    print(f"\tLista de ingredientes: {cookbook[receta]['ingredients']}")
+    print(f"\tTipo de comida {cookbook[receta]['meal']}.")
+    print(f"\tTiempo de preparacion: {cookbook[receta]['prep_time']}.")
 
-def delete_recipe():
+def eliminar_receta():
     try:
         r = input("Introduzca el nombre de la receta para borrarla: ")
         cookbook.pop(r)
     except KeyError:
-        print("KeyError: You must enter a saved recipe.")
+        print("Tienes que introducir una receta ya guardada.")
+    print("Receta eliminada con exito! Que vas a hacer ahora?")
 
-def add_recipe():
-    
-    r1 = input("Enter a recipe name: ")
-    ingredientes=[]
-    r2 = input("Enter a ingredient: ")
+def agregar_receta():
+    r1 = input("Nombre de la receta: ")
+    ingredientes = []
+    r2 = input("Introduce los ingredientes: ")
+    print("Una vez hayas terminado de introducir los ingredientes, deja el espacio en blanco.")
     while(len(r2) != 0):
-        r2 =input("Enter a ingredient: ")
-    r3 = input("Enter a meal type: ")
-    r4 = input("Enter a preparation time: ")
+        r2 =input("Introduce los ingredientes: ")
+    r3 = input("Tipo de comida: ")
+    r4 = input("Tiempo de preparacion: ")
+
+    print("Receta guardada con exito! Que vas a hacer ahora?")
 
     r = {
     'r1': {
@@ -58,28 +62,36 @@ def add_recipe():
     }
     cookbook.update(r)
 
+def salir():
+    print("Gracias por utilizar el libro de recetas de python!")
+    exit()
+
 def menu():
+    print("Bienvenido al libro de cocina de Python!")
+    while True:
+        print("Lista de opciones:")
+        print("\t1: Agregar una receta")
+        print("\t2: Eliminar una receta")
+        print("\t3: Mostrar receta")
+        print("\t4: Mostrar \"Cookbook\"")
+        print("\t5: Salir")
 
-    print("Welcome to the Python Cookbook !")
-    print("List of available option:")
-    print("\t1: Add a recipe")
-    print("\t2: Delete a recipe")
-    print("\t3: Print a recipe")
-    print("\t4: Print the cookbook")
-    print("\t5: Quit")
+        respuesta1 = int(input("Por favor elija una opción: "))
+        botones = {
+             1: agregar_receta,
+             2: eliminar_receta,
+             3: detalles_receta,
+             4: mostrar_cookbook,
+             5: salir
+            }
+        func = botones.get(respuesta1)
+        
+        if func:
+            func()
+        else:
+            print("Respuesta incorrecta")
 
-    respuesta1 = str(input("Please select an option:"))
-    switcher = {
-         1:
-            add_recipe(),
-         2:
-            delete_recipe(),
-         3:
-            details_cookbook(),
-         4:
-            show_cookbook()
-        }
-    func = switcher.get(respuesta1, "respuesta incorrecta")
-    print(func)
+        if respuesta1 == 5:
+            break
 
 menu()

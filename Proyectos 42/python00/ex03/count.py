@@ -1,7 +1,11 @@
+
+# EX03 / COUNT.PY #
+
 '''Hacer un programa que cuente mayusculas, minusculas, espacios y signos de puntuacion'''
 
 import sys
-def text_analyzer(texto=None):
+
+def text_analyzer(texto = None):
   
     if texto is None or texto == "":
         texto = input("Introduce una cadena de texto: ")
@@ -20,11 +24,13 @@ def text_analyzer(texto=None):
         else:
             num_puntuacion += 1
     resultado = len(texto)
+
     print(f"Tu texto contiene {resultado} caractere(s)")
     print("Número de mayúsculas: ", num_mayus)
     print("Número de minúsculas: ", num_minus)
     print("Número de signos de puntuación: ", num_puntuacion)
     print("Número de espacios: ", num_espacios)
+    
 if __name__ == '__main__':
     if len(sys.argv) > 1:
         texto = " ".join(sys.argv[1:])

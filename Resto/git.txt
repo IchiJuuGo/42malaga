@@ -16,4 +16,4 @@ git push git@github.com:IchiJuuGo/42malaga.git main
 git init
 git add .
 git commit -m 21/04/2023
-git push git@github.com:IchiJuuGo/42malaga.git main 
+git push git@github.com:IchiJuuGo/42malaga.git main

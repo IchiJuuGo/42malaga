@@ -1,4 +1,10 @@
 
+# EX07 - FILTERWORDS.PY #
+
+'''Crea un programa que tome una cadena de texto S y un entero N como argumento, 
+e imprima la lista de palabras en S que contengan más 
+de N caracteres que no sean de puntuación.'''
+
 import sys
 import string
 

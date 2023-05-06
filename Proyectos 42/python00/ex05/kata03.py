@@ -1,4 +1,6 @@
 
+# EX05 - KATA03 #
+
 '''
 The kata variable is always a string whose length 
 is not higher than 42.
