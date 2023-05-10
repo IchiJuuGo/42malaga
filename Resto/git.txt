@@ -1,3 +1,9 @@
+///////////////////////////////
+
+SUBIR MIS ACTUALIZACIONES A MI GIT
+
+///////////////////////////////
+
 # Iniciamos git EN EL DIRECTORIO
 git init
 
@@ -11,9 +17,45 @@ git commit -m "<fecha de hoy>"
 # Subimos los cambios a GitHub
 git push git@github.com:IchiJuuGo/42malaga.git main
 
-//////////////////
+# Resumen:
 
 git init
 git add .
 git commit -m 21/04/2023
 git push git@github.com:IchiJuuGo/42malaga.git main
+
+///////////////////////////////////
+
+SUBIR EJERCICIOS PARA PRESENTARLOS
+
+///////////////////////////////
+
+### EN LA CONSOLA ###
+En la carpeta del proyecto que vaya a entregar:
+git init
+git add .
+git commit
+
+Al subir el commit sin -m te salta el archivo. Hay que agregar
+a la linea de arriba:
+ADD: all proyects
+
+git remote add 42 <git repository de la intra asociado al proyecto>
+git push 42 master
+
+Tambien tenemos tambien para comprobar los procesos:
+git status
+git log
+git remote
+
+### UNA VEZ HECHO ESTO ###
+En la carpeta del escritorio de Backup
+git clone <git repository de la intra asociado al proyecto> aaaaaaa
+
+Se queda ahi copiado por si acaso para revisarlo antes de
+marcar el proyecto como finalizado
+
+### EN LA INTRA ###
+Set proyet as finished
+
+

@@ -128,7 +128,7 @@ def main():
         action='store_true',
     )
     argumentos = analizador.parse_args()
-    if not argumentos.g and not argumentos.k:
+    if not argumentos.g and not argumentos.k and not argumentos.q:
         print("No se ha especificado ninguna opción.")
     if argumentos.g == True:
         clave = leer_clave(argumentos.fichero)
