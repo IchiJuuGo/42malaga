@@ -28,34 +28,24 @@ git push git@github.com:IchiJuuGo/42malaga.git main
 
 SUBIR EJERCICIOS PARA PRESENTARLOS
 
-///////////////////////////////
+///////////////////////////////////
 
 ### EN LA CONSOLA ###
-En la carpeta del proyecto que vaya a entregar:
-git init
+>> En la carpeta del proyecto que vaya a entregar:
+git init (si no esta hecho en esa carpeta, se comprueba con (cmd + shift + .) para ver los archivos ocultos)
+git remote add origin <enlace repositorio git de la intra> (origin es el nombre que le damos)
 git add .
-git commit
+git status para comprobar
+git rm -f .DS_Store si aparece
+git status para comprobar
+git commit -m "Done"
+git push origin master
 
-Al subir el commit sin -m te salta el archivo. Hay que agregar
-a la linea de arriba:
-ADD: all proyects
+>> Para comprobar que esta subido bien hacemos el clone a una carpeta de prueba
+git clone <enlace repositorio git de la intra> .
 
-git remote add 42 <git repository de la intra asociado al proyecto>
-git push 42 master
 
 Tambien tenemos tambien para comprobar los procesos:
 git status
 git log
 git remote
-
-### UNA VEZ HECHO ESTO ###
-En la carpeta del escritorio de Backup
-git clone <git repository de la intra asociado al proyecto> aaaaaaa
-
-Se queda ahi copiado por si acaso para revisarlo antes de
-marcar el proyecto como finalizado
-
-### EN LA INTRA ###
-Set proyet as finished
-
-

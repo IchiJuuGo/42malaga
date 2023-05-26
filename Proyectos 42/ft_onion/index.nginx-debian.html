@@ -1,0 +1,237 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Un secreto</title>
+  <style>
+    /* Estilos generales */
+    body {
+      background-image: url('fondo-universo.jpg');
+      background-size: cover;
+      background-position: center center;
+      text-align: center;
+    }
+
+    .contenido {
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Estilos para la frase "Salvan el mundo y no lo sabes" */
+    .frase1 {
+      color: black;
+      font-size: 24px;
+      background-color: white;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Estilos para la frase "Conócenos" */
+    .frase2 {
+      color: red;
+      font-size: 18px;
+      background-color: purple;
+      padding: 10px;
+    }
+
+    /* Estilos para el botón */
+    .boton {
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Estilos para la imagen */
+    .imagen {
+      display: none;
+      margin-top: 20px;
+    }
+
+    /* Estilos para el enlace */
+    .enlace {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function mostrarImagen() {
+      var imagen = document.getElementById('gemas');
+      imagen.style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <div class="contenido">
+    <h1 class="frase1">Salvan el mundo y no lo sabes</h1>
+    <button class="boton" onclick="mostrarImagen()">Quienes seran...</button>
+    <img id="gemas" class="imagen" src="gemas.jpg" alt="Gemas de Cristal">
+    <p class="frase2"><a href="https://steven-universe.fandom.com/es/wiki/Portada" class="enlace">Conocenos</a></p>
+  </div>
+</body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Un secreto</title>
+  <style>
+    /* Estilos generales */
+    body {
+      background-image: url('fondo-universo.jpg');
+      background-size: cover;
+      background-position: center center;
+      text-align: center;
+    }
+
+    .contenido {
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Estilos para la frase "Salvan el mundo y no lo sabes" */
+    .frase1 {
+      color: black;
+      font-size: 24px;
+      background-color: white;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Estilos para la frase "Conocenos" */
+    .frase2 {
+      color: red;
+      font-size: 18px;
+      background-color: white;
+      padding: 10px;
+    }
+
+    /* Estilos para el botón */
+    .boton {
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Estilos para la imagen */
+    .imagen {
+      display: none;
+      margin-top: 20px;
+    }
+
+    /* Estilos para el enlace */
+    .enlace {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function mostrarImagen() {
+      var imagen = document.getElementById('gemas');
+      imagen.style.display = 'block';
+
+      var botonConocenos = document.getElementById('botonConocenos');
+      botonConocenos.style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <div class="contenido">
+    <h1 class="frase1">Salvan el mundo y no lo sabes</h1>
+    <button class="boton" onclick="mostrarImagen()"> Quienes seran... </button>
+    <img id="gemas" class="imagen" src="gemas.jpg" alt="Gemas de Cristal" style="display: none;">
+    <button id="botonConocenos" class="boton" style="display: none;"><a href="https://steven-universe.fandom.com/es/wiki/Portada" class="enlace"> Conocenos </a></button>
+  </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Un secreto</title>
+  <style>
+    /* Estilos generales */
+    body {
+      background-image: url('fondo-universo.jpg');
+      background-size: cover;
+      background-position: center center;
+      text-align: center;
+    }
+
+    .contenido {
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Estilos para la frase "Salvan el mundo y no lo sabes" */
+    .frase1 {
+      color: black;
+      font-size: 24px;
+      background-color: white;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Estilos para la frase "Conócenos" */
+    .frase2 {
+      color: red;
+      font-size: 18px;
+      background-color: purple;
+      padding: 10px;
+    }
+
+    /* Estilos para el botón */
+    .boton {
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Estilos para la imagen */
+    .imagen {
+      display: none;
+      margin-top: 20px;
+    }
+
+    /* Estilos para el enlace */
+    .enlace {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function mostrarImagen() {
+      var imagen = document.getElementById('gemas');
+      imagen.style.display = 'block';
+      imagen.style.marginBottom = '20px';
+
+      var botonConocenos = document.getElementById('botonConocenos');
+      botonConocenos.style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <div class="contenido">
+    <h1 class="frase1">Salvan el mundo y no lo sabes</h1>
+    <button class="boton" onclick="mostrarImagen()"> Quienes seran... </button>
+    <img id="gemas" class="imagen" src="gemas.jpg" alt="Gemas de Cristal" style="display: none;">
+    <button id="botonConocenos" class="boton" style="display: none;"><a href="https://steven-universe.fandom.com/es/wiki/Portada" class="enlace"> Conocenos </a></button>
+  </div>
+</body>
+</html>
