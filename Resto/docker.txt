@@ -1,5 +1,0 @@
-
-Ejecutar docker:
-/sgoinfre/shared/42toolbox/init_docker.sh
-
-
