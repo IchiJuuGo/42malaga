@@ -87,4 +87,4 @@ app.run(host = '0.0.0.0', port = 5000)
 
 
 # PRUEBAS CHATGPT CORRECCION
-
+# Video minuto 1:05:25
