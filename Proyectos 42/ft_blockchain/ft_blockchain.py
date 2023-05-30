@@ -1,3 +1,7 @@
+
+
+# Blockchain sin criptomoneda, solo la cadena, mineo y validacion.
+
 # Librerias
 import datetime
 import hashlib
@@ -49,7 +53,7 @@ class Blockchain:
                 return False
             previous_proof = previous_block['proof']
             proof = block['proof']
-            hash_operation = hashlib.sha256(str(new_proof**2 - previous_proof**2).encode()).hexdigest()
+            hash_operation = hashlib.sha256(str(proof**2 - previous_proof**2).encode()).hexdigest()
             if hash_operation[:4] != '0000':
                 return False
             
@@ -83,8 +87,15 @@ def get_chain():
                 'length': len(blockchain.chain)}
     return jsonify(response), 200
 
+# Comprobando la validez de la cadena de bloques
+@app.route('/verify', methods=['GET'])
+def is_valid():
+    is_valid = blockchain.is_chain_valid(blockchain.chain)
+    if is_valid:
+        response = {'message': "La cadena es valida"}
+    else:
+        response = {'message': "El blockchain es invalido"}
+    return jsonify(response), 200
+
+# Lanzando la app
 app.run(host = '0.0.0.0', port = 5000)
-
-
-# PRUEBAS CHATGPT CORRECCION
-# Video minuto 1:05:25
