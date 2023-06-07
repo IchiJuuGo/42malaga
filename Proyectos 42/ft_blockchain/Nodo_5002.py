@@ -32,20 +32,21 @@ class Blockchain:
         max_lenght = len(self.chain)
 
         for node in network:
-            response  = requests.get(f'http://{node}/get_chain')
+            response  = requests.get(f'http://{node}/chain')
             ### AQUI A LO MEJOR HAY QUE QUITAR EL GET_
             if response.status_code == 200:
-                length = response.json(['length'])
-                chain = response.json(['chain'])
+                length = response.json()['length']
+                chain = response.json()['chain']
 
                 if length > max_lenght and self.is_chain_valid(chain):
                     max_lenght = length
                     longest_chain = chain
             
-            if longest_chain:
-                self.chain = longest_chain
-                return True
-            return False
+        if longest_chain:
+            self.chain = longest_chain
+            return True
+            
+        return False
 
 
 # Crea un nuevo bloque en la cadena con todos los datos necesarios incluidos. 
@@ -132,7 +133,7 @@ def mine_block():
     previous_proof = previous_block['proof']
     proof = blockchain.proof_of_work(previous_proof)
     previous_hash = blockchain.hash(previous_block)
-    blockchain.add_transaction(sender = node_address, receiver = 'Carmen', amount = 1)
+    blockchain.add_transaction(sender = node_address, receiver = 'Sharonne', amount = 1)
     block = blockchain.create_block(proof, previous_hash)
     response = {'message': "Enhorabuena, has minado un bloque.", 
                 'index': block['index'],
@@ -203,4 +204,4 @@ def replace_chain():
     return jsonify(response), 200
 
 # Lanzando la app
-app.run(host = '0.0.0.0', port = 5001)
+app.run(host = '0.0.0.0', port = 5002)

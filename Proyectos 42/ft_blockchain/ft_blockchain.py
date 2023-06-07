@@ -1,5 +1,4 @@
 
-
 # Blockchain sin criptomoneda, solo la cadena, mineo y validacion.
 
 # Librerias

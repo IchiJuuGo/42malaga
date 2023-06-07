@@ -32,21 +32,20 @@ class Blockchain:
         max_lenght = len(self.chain)
 
         for node in network:
-            response  = requests.get(f'http://{node}/get_chain')
-            ### AQUI A LO MEJOR HAY QUE QUITAR EL GET_
+            response  = requests.get(f'http://{node}/chain')
             if response.status_code == 200:
-                length = response.json(['length'])
-                chain = response.json(['chain'])
+                length = response.json()['length']
+                chain = response.json()['chain']
 
                 if length > max_lenght and self.is_chain_valid(chain):
                     max_lenght = length
                     longest_chain = chain
             
-            if longest_chain:
-                self.chain = longest_chain
-                return True
-            return False
-
+        if longest_chain:
+            self.chain = longest_chain
+            return True
+            
+        return False
 
 # Crea un nuevo bloque en la cadena con todos los datos necesarios incluidos. 
 # Luego, reinicia la lista de transacciones y agrega el bloque a la cadena.
@@ -158,8 +157,6 @@ def is_valid():
     else:
         response = {'message': "El blockchain es invalido"}
     return jsonify(response), 200
-
-
 
 # Agregando una nueva transaccion al blockchain
 @app.route('/add', methods=['POST'])
